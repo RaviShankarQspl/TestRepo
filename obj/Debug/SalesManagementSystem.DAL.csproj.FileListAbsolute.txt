@@ -1,0 +1,69 @@
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll.config
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.pdb
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\EntityFramework.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\EntityFramework.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.dll
+D:\CURRENT PROJECTS\Sales Management System\Source\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.pdb
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll.config
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.pdb
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\itextsharp.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\PdfReportGenerator.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.dll
+D:\CURRENT PROJECTS\Sales Management System\SalesManagementSystem\Sales_Management_System\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.pdb
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll.config
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\SalesManagementSystem.DAL.pdb
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Helpers.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Mvc.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.Razor.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.csprojResolveAssemblyReference.cache
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.dll
+D:\TestD2D\Sales_Management_System\SalesManagementSystem.DAL\obj\Debug\SalesManagementSystem.DAL.pdb

@@ -1,0 +1,1308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SalesManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="SalesManagementModel.City" />
+    <EntitySet Name="Contracts" EntityType="SalesManagementModel.Contract" />
+    <EntitySet Name="ContractPayments" EntityType="SalesManagementModel.ContractPayment" />
+    <EntitySet Name="ContractPaymentTrackings" EntityType="SalesManagementModel.ContractPaymentTracking" />
+    <EntitySet Name="ContractProducts" EntityType="SalesManagementModel.ContractProduct" />
+    <EntitySet Name="ContractStatus" EntityType="SalesManagementModel.ContractStatu" />
+    <EntitySet Name="Countries" EntityType="SalesManagementModel.Country" />
+    <EntitySet Name="CustomerDetails" EntityType="SalesManagementModel.CustomerDetail" />
+    <EntitySet Name="CustomerTypes" EntityType="SalesManagementModel.CustomerType" />
+    <EntitySet Name="EmploymentTypes" EntityType="SalesManagementModel.EmploymentType" />
+    <EntitySet Name="IDInfromations" EntityType="SalesManagementModel.IDInfromation" />
+    <EntitySet Name="MainGroups" EntityType="SalesManagementModel.MainGroup" />
+    <EntitySet Name="MasterCategories" EntityType="SalesManagementModel.MasterCategory" />
+    <EntitySet Name="MissingPaymentCalculations" EntityType="SalesManagementModel.MissingPaymentCalculation" />
+    <EntitySet Name="NZHolidays" EntityType="SalesManagementModel.NZHoliday" />
+    <EntitySet Name="PaymentFrequencies" EntityType="SalesManagementModel.PaymentFrequency" />
+    <EntitySet Name="PaymentMethods" EntityType="SalesManagementModel.PaymentMethod" />
+    <EntitySet Name="PaymentShedules" EntityType="SalesManagementModel.PaymentShedule" />
+    <EntitySet Name="PaymentTransactionStatus" EntityType="SalesManagementModel.PaymentTransactionStatu" />
+    <EntitySet Name="PlanTypes" EntityType="SalesManagementModel.PlanType" />
+    <EntitySet Name="Products" EntityType="SalesManagementModel.Product" />
+    <EntitySet Name="ProductTypes" EntityType="SalesManagementModel.ProductType" />
+    <EntitySet Name="Relationships" EntityType="SalesManagementModel.Relationship" />
+    <EntitySet Name="Roles" EntityType="SalesManagementModel.Role" />
+    <EntitySet Name="SalaryTypes" EntityType="SalesManagementModel.SalaryType" />
+    <EntitySet Name="ShippingAfters" EntityType="SalesManagementModel.ShippingAfter" />
+    <EntitySet Name="SubCategories" EntityType="SalesManagementModel.SubCategory" />
+    <EntitySet Name="Suppliers" EntityType="SalesManagementModel.Supplier" />
+    <EntitySet Name="SupplierPriorities" EntityType="SalesManagementModel.SupplierPriority" />
+    <EntitySet Name="SupplierProducts" EntityType="SalesManagementModel.SupplierProduct" />
+    <EntitySet Name="TenantDetails" EntityType="SalesManagementModel.TenantDetail" />
+    <EntitySet Name="TenantPayments" EntityType="SalesManagementModel.TenantPayment" />
+    <EntitySet Name="TermsConditionModes" EntityType="SalesManagementModel.TermsConditionMode" />
+    <EntitySet Name="Titles" EntityType="SalesManagementModel.Title" />
+    <EntitySet Name="Users" EntityType="SalesManagementModel.User" />
+    <AssociationSet Name="FK_CustomerDetails_City" Association="SalesManagementModel.FK_CustomerDetails_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_City1" Association="SalesManagementModel.FK_CustomerDetails_City1">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_City2" Association="SalesManagementModel.FK_CustomerDetails_City2">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_City" Association="SalesManagementModel.FK_Supplier_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_ContractStatus" Association="SalesManagementModel.FK_Contract_ContractStatus">
+      <End Role="ContractStatu" EntitySet="ContractStatus" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_CustomerDetails" Association="SalesManagementModel.FK_Contract_CustomerDetails">
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_CustomerType" Association="SalesManagementModel.FK_Contract_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Country" Association="SalesManagementModel.FK_CustomerDetails_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Country1" Association="SalesManagementModel.FK_CustomerDetails_Country1">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Country2" Association="SalesManagementModel.FK_CustomerDetails_Country2">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Country" Association="SalesManagementModel.FK_Supplier_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_CustomerType" Association="SalesManagementModel.FK_CustomerDetails_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_EmploymentType" Association="SalesManagementModel.FK_CustomerDetails_EmploymentType">
+      <End Role="EmploymentType" EntitySet="EmploymentTypes" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_ID1Infromation" Association="SalesManagementModel.FK_CustomerDetails_ID1Infromation">
+      <End Role="IDInfromation" EntitySet="IDInfromations" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_ID2Infromation" Association="SalesManagementModel.FK_CustomerDetails_ID2Infromation">
+      <End Role="IDInfromation" EntitySet="IDInfromations" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_ID3Infromation" Association="SalesManagementModel.FK_CustomerDetails_ID3Infromation">
+      <End Role="IDInfromation" EntitySet="IDInfromations" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Relationship1" Association="SalesManagementModel.FK_CustomerDetails_Relationship1">
+      <End Role="Relationship" EntitySet="Relationships" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Relationship2" Association="SalesManagementModel.FK_CustomerDetails_Relationship2">
+      <End Role="Relationship" EntitySet="Relationships" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_SalaryType" Association="SalesManagementModel.FK_CustomerDetails_SalaryType">
+      <End Role="SalaryType" EntitySet="SalaryTypes" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerDetails_Title" Association="SalesManagementModel.FK_CustomerDetails_Title">
+      <End Role="Title" EntitySet="Titles" />
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_MainGroup" Association="SalesManagementModel.FK_Product_MainGroup">
+      <End Role="MainGroup" EntitySet="MainGroups" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_MasterCategory" Association="SalesManagementModel.FK_Product_MasterCategory">
+      <End Role="MasterCategory" EntitySet="MasterCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductType" Association="SalesManagementModel.FK_Product_ProductType">
+      <End Role="ProductType" EntitySet="ProductTypes" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_SubCategory" Association="SalesManagementModel.FK_Product_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Supplier_Primary" Association="SalesManagementModel.FK_Product_Supplier_Primary">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Supplier_Secondary" Association="SalesManagementModel.FK_Product_Supplier_Secondary">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_SupplierPriority" Association="SalesManagementModel.FK_Supplier_SupplierPriority">
+      <End Role="SupplierPriority" EntitySet="SupplierPriorities" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierProduct_Supplier" Association="SalesManagementModel.FK_SupplierProduct_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="SupplierProduct" EntitySet="SupplierProducts" />
+    </AssociationSet>
+    <EntitySet Name="SecurityQuestions" EntityType="SalesManagementModel.SecurityQuestion" />
+    <EntitySet Name="UserDetails" EntityType="SalesManagementModel.UserDetail" />
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityEntityID" />
+    </Key>
+    <Property Name="CityEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_City" FromRole="City" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails1" Relationship="SalesManagementModel.FK_CustomerDetails_City1" FromRole="City" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails2" Relationship="SalesManagementModel.FK_CustomerDetails_City2" FromRole="City" ToRole="CustomerDetail" />
+    <NavigationProperty Name="Suppliers" Relationship="SalesManagementModel.FK_Supplier_City" FromRole="City" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ContractEntityID" />
+    </Key>
+    <Property Name="ContractEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int64" />
+    <Property Name="ContractStatusEntityId" Type="Int32" />
+    <Property Name="OtherID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SalesRepID" Type="Int32" />
+    <Property Name="TeamLeadID" Type="Int32" />
+    <Property Name="CustomerType" Type="Int32" />
+    <Property Name="FirstPaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="NumberOfProducts" Type="Int32" />
+    <Property Name="FrequencyOfPayment" Type="Int32" />
+    <Property Name="AddInitialOneOff" Type="Boolean" />
+    <Property Name="InitialOneOffPaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="InitialOneOffPayment" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="FirstRegularPayment" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="InstallmentAmount" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="PaymentMethod" Type="Int32" />
+    <Property Name="LastPaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="LastPaymentDateForecast" Type="DateTime" Precision="0" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="TotalInstallment" Type="Int32" />
+    <Property Name="NoOfMissingPayments" Type="Int32" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ContractStatu" Relationship="SalesManagementModel.FK_Contract_ContractStatus" FromRole="Contract" ToRole="ContractStatu" />
+    <NavigationProperty Name="CustomerDetail" Relationship="SalesManagementModel.FK_Contract_CustomerDetails" FromRole="Contract" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerType1" Relationship="SalesManagementModel.FK_Contract_CustomerType" FromRole="Contract" ToRole="CustomerType" />
+    <Property Name="ContractTotalAmount" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="ThirdPartyID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContractPayment">
+    <Key>
+      <PropertyRef Name="ContractPaymentEntityID" />
+    </Key>
+    <Property Name="ContractPaymentEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerEntityID" Type="Int64" Nullable="false" />
+    <Property Name="ContractEntityID" Type="Int64" Nullable="false" />
+    <Property Name="PaymentMethod" Type="Int32" Nullable="false" />
+    <Property Name="GeneratedToken" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NameOfAccountHolder" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Bank" Type="Int32" />
+    <Property Name="Branch" Type="Int32" />
+    <Property Name="AccountNumber" Type="Int32" />
+    <Property Name="Suffix" Type="Int32" />
+    <Property Name="BankName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BankBranch" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BankAddress1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BankAddress2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CityTown" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AgreedToDDTC" Type="Int32" />
+    <Property Name="Attachement1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Attachement2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Attachement3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Browser" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ThirdPartyID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ContractPaymentTracking">
+    <Key>
+      <PropertyRef Name="ContractPaymentTrackingEntityID" />
+    </Key>
+    <Property Name="ContractPaymentTrackingEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="ContractEntityID" Type="Int64" />
+    <Property Name="CustomerEntityID" Type="Int64" />
+    <Property Name="StatusOfPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="updatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ContractProduct">
+    <Key>
+      <PropertyRef Name="ContractProductEntityID" />
+    </Key>
+    <Property Name="ContractProductEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractEntityID" Type="Int32" />
+    <Property Name="CustomerEntityID" Type="Int32" />
+    <Property Name="ProductEntityID" Type="Int32" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PlanType" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="Installment" Type="Int32" />
+    <Property Name="ShippingDate" Type="DateTime" Precision="0" />
+    <Property Name="ShippingDateForecast" Type="DateTime" Precision="0" />
+    <Property Name="LastRegularPaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="LastRegularPaymentDateForecast" Type="DateTime" Precision="0" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ContractStatu">
+    <Key>
+      <PropertyRef Name="ContractStatusEntityID" />
+    </Key>
+    <Property Name="ContractStatusEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Contracts" Relationship="SalesManagementModel.FK_Contract_ContractStatus" FromRole="ContractStatu" ToRole="Contract" />
+    <Property Name="ArrangeOnEdit" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryEntityID" />
+    </Key>
+    <Property Name="CountryEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_Country" FromRole="Country" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails1" Relationship="SalesManagementModel.FK_CustomerDetails_Country1" FromRole="Country" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails2" Relationship="SalesManagementModel.FK_CustomerDetails_Country2" FromRole="Country" ToRole="CustomerDetail" />
+    <NavigationProperty Name="Suppliers" Relationship="SalesManagementModel.FK_Supplier_Country" FromRole="Country" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="CustomerDetail">
+    <Key>
+      <PropertyRef Name="CustomerEntityId" />
+    </Key>
+    <Property Name="CustomerEntityId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitleId" Type="Int32" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressStreet1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressStreet2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SuburbArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="OtherCityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentAddressFrom" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CurrentAddressTo" Type="DateTime" Precision="0" />
+    <Property Name="EmployerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMPSuburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmploymentFrom" Type="DateTime" Precision="0" />
+    <Property Name="EmploymentTo" Type="DateTime" Precision="0" />
+    <Property Name="EmploymentTypeEntityId" Type="Int32" />
+    <Property Name="EmpSalaryType" Type="Int32" />
+    <Property Name="EmpSalary" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ID1Type" Type="Int32" />
+    <Property Name="ID1Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ID1ValidityFrom" Type="DateTime" Precision="0" />
+    <Property Name="ID1ValidityTo" Type="DateTime" Precision="0" />
+    <Property Name="ID1Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ID1Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID2Type" Type="Int32" />
+    <Property Name="ID2Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ID2ValidityFrom" Type="DateTime" Precision="0" />
+    <Property Name="ID2ValidityTo" Type="DateTime" Precision="0" />
+    <Property Name="ID2Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ID2Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID3Type" Type="Int32" />
+    <Property Name="ID3Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ID3ValidityFrom" Type="DateTime" Precision="0" />
+    <Property Name="ID3ValidityTo" Type="DateTime" Precision="0" />
+    <Property Name="ID3Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ID3Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreditScore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreditScoreDate" Type="DateTime" Precision="0" />
+    <Property Name="CreditOtherInfo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument5" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument6" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument7" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument8" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument9" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditDocument10" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1RelationShip" Type="Int32" />
+    <Property Name="Ref1FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1Stree1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1Stree2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1Suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1PostalCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref1Country" Type="Int32" />
+    <Property Name="Ref1City" Type="Int32" />
+    <Property Name="Ref1OtherCity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2RelationShip" Type="Int32" />
+    <Property Name="Ref2FullName2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2Stree1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2Stree2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2Suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2PostalCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Ref2Country" Type="Int32" />
+    <Property Name="Ref2City" Type="Int32" />
+    <Property Name="Ref2OtherCity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerTypeEntityID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="City" Relationship="SalesManagementModel.FK_CustomerDetails_City" FromRole="CustomerDetail" ToRole="City" />
+    <NavigationProperty Name="City1" Relationship="SalesManagementModel.FK_CustomerDetails_City1" FromRole="CustomerDetail" ToRole="City" />
+    <NavigationProperty Name="City2" Relationship="SalesManagementModel.FK_CustomerDetails_City2" FromRole="CustomerDetail" ToRole="City" />
+    <NavigationProperty Name="Contracts" Relationship="SalesManagementModel.FK_Contract_CustomerDetails" FromRole="CustomerDetail" ToRole="Contract" />
+    <NavigationProperty Name="Country" Relationship="SalesManagementModel.FK_CustomerDetails_Country" FromRole="CustomerDetail" ToRole="Country" />
+    <NavigationProperty Name="Country1" Relationship="SalesManagementModel.FK_CustomerDetails_Country1" FromRole="CustomerDetail" ToRole="Country" />
+    <NavigationProperty Name="Country2" Relationship="SalesManagementModel.FK_CustomerDetails_Country2" FromRole="CustomerDetail" ToRole="Country" />
+    <NavigationProperty Name="CustomerType" Relationship="SalesManagementModel.FK_CustomerDetails_CustomerType" FromRole="CustomerDetail" ToRole="CustomerType" />
+    <NavigationProperty Name="EmploymentType" Relationship="SalesManagementModel.FK_CustomerDetails_EmploymentType" FromRole="CustomerDetail" ToRole="EmploymentType" />
+    <NavigationProperty Name="IDInfromation" Relationship="SalesManagementModel.FK_CustomerDetails_ID1Infromation" FromRole="CustomerDetail" ToRole="IDInfromation" />
+    <NavigationProperty Name="IDInfromation1" Relationship="SalesManagementModel.FK_CustomerDetails_ID2Infromation" FromRole="CustomerDetail" ToRole="IDInfromation" />
+    <NavigationProperty Name="IDInfromation2" Relationship="SalesManagementModel.FK_CustomerDetails_ID3Infromation" FromRole="CustomerDetail" ToRole="IDInfromation" />
+    <NavigationProperty Name="Relationship" Relationship="SalesManagementModel.FK_CustomerDetails_Relationship1" FromRole="CustomerDetail" ToRole="Relationship" />
+    <NavigationProperty Name="Relationship1" Relationship="SalesManagementModel.FK_CustomerDetails_Relationship2" FromRole="CustomerDetail" ToRole="Relationship" />
+    <NavigationProperty Name="SalaryType" Relationship="SalesManagementModel.FK_CustomerDetails_SalaryType" FromRole="CustomerDetail" ToRole="SalaryType" />
+    <NavigationProperty Name="Title" Relationship="SalesManagementModel.FK_CustomerDetails_Title" FromRole="CustomerDetail" ToRole="Title" />
+  </EntityType>
+  <EntityType Name="CustomerType">
+    <Key>
+      <PropertyRef Name="CustomerTypeEntityID" />
+    </Key>
+    <Property Name="CustomerTypeEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Contracts" Relationship="SalesManagementModel.FK_Contract_CustomerType" FromRole="CustomerType" ToRole="Contract" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_CustomerType" FromRole="CustomerType" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeEntityID" />
+    </Key>
+    <Property Name="EmploymentTypeEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmploymentTypeName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_EmploymentType" FromRole="EmploymentType" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="IDInfromation">
+    <Key>
+      <PropertyRef Name="IDEntityID" />
+    </Key>
+    <Property Name="IDEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_ID1Infromation" FromRole="IDInfromation" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails1" Relationship="SalesManagementModel.FK_CustomerDetails_ID2Infromation" FromRole="IDInfromation" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails2" Relationship="SalesManagementModel.FK_CustomerDetails_ID3Infromation" FromRole="IDInfromation" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="MainGroup">
+    <Key>
+      <PropertyRef Name="GroupEntityID" />
+    </Key>
+    <Property Name="GroupEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GroupDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Products" Relationship="SalesManagementModel.FK_Product_MainGroup" FromRole="MainGroup" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="MasterCategory">
+    <Key>
+      <PropertyRef Name="CategoryEntityID" />
+    </Key>
+    <Property Name="CategoryEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategotyDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Products" Relationship="SalesManagementModel.FK_Product_MasterCategory" FromRole="MasterCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="MissingPaymentCalculation">
+    <Key>
+      <PropertyRef Name="MissingPaymentCalculationEntityID" />
+    </Key>
+    <Property Name="MissingPaymentCalculationEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanTypeEntityID" Type="Int64" />
+    <Property Name="MissingPayment" Type="Int32" />
+    <Property Name="ShippingAfterWeek" Type="Int32" />
+    <Property Name="MinimumPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Int64" />
+    <Property Name="IsDelete" Type="Int64" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="NZHoliday">
+    <Key>
+      <PropertyRef Name="HolidayEntityId" />
+    </Key>
+    <Property Name="HolidayEntityId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HolidayName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="HolidayDate" Type="DateTime" Precision="0" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountOfHoliday" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Boolean" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymentFrequency">
+    <Key>
+      <PropertyRef Name="PaymentFrequencyEntityID" />
+    </Key>
+    <Property Name="PaymentFrequencyEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FrequencyDays" Type="Int32" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="PaymentMethodEntityID" />
+    </Key>
+    <Property Name="PaymentMethodEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymentShedule">
+    <Key>
+      <PropertyRef Name="PaymentSheduleEntityID" />
+    </Key>
+    <Property Name="PaymentSheduleEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDueDate" Type="DateTime" Precision="3" />
+    <Property Name="ActualTransactionDate" Type="DateTime" Precision="3" />
+    <Property Name="SettlementDate" Type="DateTime" Precision="3" />
+    <Property Name="SystemTransactionID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentTransactionID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Perticular" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PlanID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlanType" Type="Int32" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Error" Type="Int32" />
+    <Property Name="PaymentVia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="ContractEntityID" Type="Int64" />
+    <Property Name="CustomerEntityId" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="InitialOneOffPaymentDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymentTransactionStatu">
+    <Key>
+      <PropertyRef Name="ImportPaymentID" />
+    </Key>
+    <Property Name="ImportPaymentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDueDate" Type="DateTime" Precision="3" />
+    <Property Name="TransactionDate" Type="DateTime" Precision="3" />
+    <Property Name="SettlementDate" Type="DateTime" Precision="3" />
+    <Property Name="PlanID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Referance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Particular" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Error" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ContractEntityID" Type="Int64" />
+    <Property Name="CustomerID" Type="Int64" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="TransactionCharges" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="PlanType">
+    <Key>
+      <PropertyRef Name="PlanTypeEntityID" />
+    </Key>
+    <Property Name="PlanTypeEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfInstallment" Type="Int32" Nullable="false" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductEntityID" />
+    </Key>
+    <Property Name="ProductEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ProductDescription" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ProductTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DetailDescription" Type="String" MaxLength="2050" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="QuantityPerUnit" Type="Int32" />
+    <Property Name="ReorderLevel" Type="Int32" />
+    <Property Name="TargetLevel" Type="Int32" />
+    <Property Name="ReorderQuantity" Type="Int32" />
+    <Property Name="Discounted" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="RateOfDiscount" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="BuyPrice" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="SalePrice" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="InInventory" Type="Int32" />
+    <Property Name="PrimarySupplierEntityID" Type="Int32" />
+    <Property Name="SecondarySupplierEntityID" Type="Int32" />
+    <Property Name="ProductImage1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage5" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage6" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage7" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImage8" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SetAsDefault" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MainGroup" Relationship="SalesManagementModel.FK_Product_MainGroup" FromRole="Product" ToRole="MainGroup" />
+    <NavigationProperty Name="MasterCategory" Relationship="SalesManagementModel.FK_Product_MasterCategory" FromRole="Product" ToRole="MasterCategory" />
+    <NavigationProperty Name="ProductType" Relationship="SalesManagementModel.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
+    <NavigationProperty Name="SubCategory" Relationship="SalesManagementModel.FK_Product_SubCategory" FromRole="Product" ToRole="SubCategory" />
+    <NavigationProperty Name="Supplier" Relationship="SalesManagementModel.FK_Product_Supplier_Primary" FromRole="Product" ToRole="Supplier" />
+    <NavigationProperty Name="Supplier1" Relationship="SalesManagementModel.FK_Product_Supplier_Secondary" FromRole="Product" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeEntityID" />
+    </Key>
+    <Property Name="ProductTypeEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ProductTypeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Products" Relationship="SalesManagementModel.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Relationship">
+    <Key>
+      <PropertyRef Name="RelationEntityID" />
+    </Key>
+    <Property Name="RelationEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_Relationship1" FromRole="Relationship" ToRole="CustomerDetail" />
+    <NavigationProperty Name="CustomerDetails1" Relationship="SalesManagementModel.FK_CustomerDetails_Relationship2" FromRole="Relationship" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleEntityID" />
+    </Key>
+    <Property Name="RoleEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SalaryType">
+    <Key>
+      <PropertyRef Name="SalaryEntityID" />
+    </Key>
+    <Property Name="SalaryEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalaryTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_SalaryType" FromRole="SalaryType" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="ShippingAfter">
+    <Key>
+      <PropertyRef Name="ShippingAfterEntityID" />
+    </Key>
+    <Property Name="ShippingAfterEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerTypeEntityID" Type="Int32" />
+    <Property Name="PlanTypeEntityID" Type="Int32" />
+    <Property Name="ShippingAfterText" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingAfterWeek" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Boolean" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SubCategory">
+    <Key>
+      <PropertyRef Name="SubCategoryEntityID" />
+    </Key>
+    <Property Name="SubCategoryEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategoryDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Products" Relationship="SalesManagementModel.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierEntityID" />
+    </Key>
+    <Property Name="SupplierEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CityEntityId" Type="Int32" />
+    <Property Name="CountryEntityId" Type="Int32" />
+    <Property Name="OtherCityname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SupPriority" Type="Int32" />
+    <Property Name="RPCContactName1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RPCDesignation1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RPCPhone1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RPCMobile1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RPCEmail1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RPCContactName2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RPCDesignation2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RPCPhone2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RPCMobile2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RPCEmail2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WebSite" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentTerms" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="City" Relationship="SalesManagementModel.FK_Supplier_City" FromRole="Supplier" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="SalesManagementModel.FK_Supplier_Country" FromRole="Supplier" ToRole="Country" />
+    <NavigationProperty Name="Products" Relationship="SalesManagementModel.FK_Product_Supplier_Primary" FromRole="Supplier" ToRole="Product" />
+    <NavigationProperty Name="Products1" Relationship="SalesManagementModel.FK_Product_Supplier_Secondary" FromRole="Supplier" ToRole="Product" />
+    <NavigationProperty Name="SupplierPriority" Relationship="SalesManagementModel.FK_Supplier_SupplierPriority" FromRole="Supplier" ToRole="SupplierPriority" />
+    <NavigationProperty Name="SupplierProducts" Relationship="SalesManagementModel.FK_SupplierProduct_Supplier" FromRole="Supplier" ToRole="SupplierProduct" />
+  </EntityType>
+  <EntityType Name="SupplierPriority">
+    <Key>
+      <PropertyRef Name="SupplierPriorityEntityID" />
+    </Key>
+    <Property Name="SupplierPriorityEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierPriorityText" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Suppliers" Relationship="SalesManagementModel.FK_Supplier_SupplierPriority" FromRole="SupplierPriority" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="SupplierProduct">
+    <Key>
+      <PropertyRef Name="SupProductEntityID" />
+    </Key>
+    <Property Name="SupProductEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierEntityID" Type="Int32" Nullable="false" />
+    <Property Name="ProductEntityID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Supplier" Relationship="SalesManagementModel.FK_SupplierProduct_Supplier" FromRole="SupplierProduct" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="TenantDetail">
+    <Key>
+      <PropertyRef Name="TenantEntityID" />
+    </Key>
+    <Property Name="TenantEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FristName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddressStreet1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddressStreet2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" />
+    <Property Name="PostalCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="SuccessPayment" Type="Int32" />
+    <Property Name="FailPayment" Type="Int32" />
+    <Property Name="ExpTimeHrs" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BeforePaymentDays" Type="Int32" />
+    <Property Name="AfterPaymentDays" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TenantPayment">
+    <Key>
+      <PropertyRef Name="TenantPaymentID" />
+    </Key>
+    <Property Name="TenantPaymentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenantID" Type="Int64" />
+    <Property Name="PaidAmount" Type="Int32" />
+    <Property Name="FailAmount" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CretetedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="FrequencyOfPayment" Type="Int32" />
+    <Property Name="PaymentMethodCredit" Type="Int32" />
+    <Property Name="PaymentMethodDebit" Type="Int32" />
+    <Property Name="CreditCardSuccessCharges" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CreditCardFailureCharges" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="DebitCardSuccessCharges" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="DebitCardFailureCharges" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CashChequeHandlingSuccess" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CashChequeHandlingFailure" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="IsOld" Type="Boolean" />
+    <Property Name="IsNew" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TermsConditionMode">
+    <Key>
+      <PropertyRef Name="TermsModeEntityID" />
+    </Key>
+    <Property Name="TermsModeEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TermsMode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Title">
+    <Key>
+      <PropertyRef Name="TitleId" />
+    </Key>
+    <Property Name="TitleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitleText" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="CustomerDetails" Relationship="SalesManagementModel.FK_CustomerDetails_Title" FromRole="Title" ToRole="CustomerDetail" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserEntityID" />
+    </Key>
+    <Property Name="UserEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleEntityID" Type="Int32" Nullable="false" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_CustomerDetails_City">
+    <End Type="SalesManagementModel.City" Role="City" Multiplicity="1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_City1">
+    <End Type="SalesManagementModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref1City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_City2">
+    <End Type="SalesManagementModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref2City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_City">
+    <End Type="SalesManagementModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityEntityID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="CityEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_ContractStatus">
+    <End Type="SalesManagementModel.ContractStatu" Role="ContractStatu" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractStatu">
+        <PropertyRef Name="ContractStatusEntityID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="ContractStatusEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_CustomerDetails">
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerDetail">
+        <PropertyRef Name="CustomerEntityId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_CustomerType">
+    <End Type="SalesManagementModel.CustomerType" Role="CustomerType" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="CustomerTypeEntityID" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="CustomerType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Country">
+    <End Type="SalesManagementModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Country1">
+    <End Type="SalesManagementModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref1Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Country2">
+    <End Type="SalesManagementModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref2Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_Country">
+    <End Type="SalesManagementModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryEntityID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="CountryEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_CustomerType">
+    <End Type="SalesManagementModel.CustomerType" Role="CustomerType" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="CustomerTypeEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="CustomerTypeEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_EmploymentType">
+    <End Type="SalesManagementModel.EmploymentType" Role="EmploymentType" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentType">
+        <PropertyRef Name="EmploymentTypeEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="EmploymentTypeEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_ID1Infromation">
+    <End Type="SalesManagementModel.IDInfromation" Role="IDInfromation" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDInfromation">
+        <PropertyRef Name="IDEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="ID1Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_ID2Infromation">
+    <End Type="SalesManagementModel.IDInfromation" Role="IDInfromation" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDInfromation">
+        <PropertyRef Name="IDEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="ID2Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_ID3Infromation">
+    <End Type="SalesManagementModel.IDInfromation" Role="IDInfromation" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDInfromation">
+        <PropertyRef Name="IDEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="ID3Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Relationship1">
+    <End Type="SalesManagementModel.Relationship" Role="Relationship" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Relationship">
+        <PropertyRef Name="RelationEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref1RelationShip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Relationship2">
+    <End Type="SalesManagementModel.Relationship" Role="Relationship" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Relationship">
+        <PropertyRef Name="RelationEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="Ref2RelationShip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_SalaryType">
+    <End Type="SalesManagementModel.SalaryType" Role="SalaryType" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalaryType">
+        <PropertyRef Name="SalaryEntityID" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="EmpSalaryType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerDetails_Title">
+    <End Type="SalesManagementModel.Title" Role="Title" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.CustomerDetail" Role="CustomerDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Title">
+        <PropertyRef Name="TitleId" />
+      </Principal>
+      <Dependent Role="CustomerDetail">
+        <PropertyRef Name="TitleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_MainGroup">
+    <End Type="SalesManagementModel.MainGroup" Role="MainGroup" Multiplicity="1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainGroup">
+        <PropertyRef Name="GroupEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_MasterCategory">
+    <End Type="SalesManagementModel.MasterCategory" Role="MasterCategory" Multiplicity="1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MasterCategory">
+        <PropertyRef Name="CategoryEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductType">
+    <End Type="SalesManagementModel.ProductType" Role="ProductType" Multiplicity="1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ProductTypeEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_SubCategory">
+    <End Type="SalesManagementModel.SubCategory" Role="SubCategory" Multiplicity="1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory">
+        <PropertyRef Name="SubCategoryEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SubCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Supplier_Primary">
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="PrimarySupplierEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Supplier_Secondary">
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierEntityID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SecondarySupplierEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_SupplierPriority">
+    <End Type="SalesManagementModel.SupplierPriority" Role="SupplierPriority" Multiplicity="0..1" />
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierPriority">
+        <PropertyRef Name="SupplierPriorityEntityID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="SupPriority" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierProduct_Supplier">
+    <End Type="SalesManagementModel.Supplier" Role="Supplier" Multiplicity="1" />
+    <End Type="SalesManagementModel.SupplierProduct" Role="SupplierProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierEntityID" />
+      </Principal>
+      <Dependent Role="SupplierProduct">
+        <PropertyRef Name="SupplierEntityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SecurityQuestion">
+    <Key>
+      <PropertyRef Name="SecurityQuestionEntityId" />
+    </Key>
+    <Property Name="SecurityQuestionEntityId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SecurityQuestion1" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserEntityID" />
+    </Key>
+    <Property Name="UserEntityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="SecurityQuestionEntityId" Type="Int64" />
+    <Property Name="Answer" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="IDType" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="TenantEntityID" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>
